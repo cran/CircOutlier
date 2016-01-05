@@ -6,5 +6,6 @@ export(
 "Predict")
 
 
-importFrom(CircStats, circ.mean)
+importFrom("CircStats", "circ.mean")
+importFrom("graphics", "abline", "par", "plot")
 import("circular")

@@ -62,7 +62,7 @@ n <- 50
 x <- rvm(n = 50, 0, 2)
 y <- rvm(n = 50, pi/4, 5)
 # Fit a circular-circular regression model.
-circ.lm <- circ.reg(y, x, order = 1)
+circ.lm <- circ.reg(x, y, order = 1)
 Y <- circ.lm$fitted
 DMCE(y, Y, n)
 }

@@ -12,7 +12,7 @@ Detecting of outliers in circular-circular regression models, modifying its and 
 \tabular{ll}{
 Package: \tab CircOutlier\cr
 Type: \tab Package\cr
-Version: \tab 3.1.3\cr
+Version: \tab 3.1.4\cr
 Date: \tab 2015-05-16\cr
 License: \tab GPL (>= 2)\cr
 }

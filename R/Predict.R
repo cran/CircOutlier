@@ -23,7 +23,6 @@ function(x, y) {
                 break
             else alpha1 = alpha2
             beta1 = beta2
-            print(c(alpha1, beta1))
         }
         output = cbind(alpha1, beta1)
         list(output = output)
