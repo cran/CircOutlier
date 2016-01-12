@@ -1,11 +1,11 @@
 export(
-"DMCE",
+"DMCEE",
 "Huberized",
 "MCE",
 "MCe",
 "Predict")
 
 
-importFrom("CircStats", "circ.mean")
+importFrom("CircStats", "circ.mean", "circ.reg")
 importFrom("graphics", "abline", "par", "plot")
 import("circular")

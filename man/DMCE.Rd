@@ -1,68 +1,33 @@
 \name{DMCE}
 \alias{DMCE}
-%- Also NEED an '\alias' for EACH other topic documented here.
+\docType{data}
 \title{
-%%
-Detecting of Outliers in Circular Regression 
+The simulated 10\% and 5\% points of the distribution of DMCE.
 }
 \description{
-%% 
-Maximum absolute difference between the values of the mean circular statistics for full and reduced data sets 
+The data used in here, obtained by using Monte-Carlo simulation method.
 }
-\usage{
-DMCE(y, Y, n)
-}
-%- maybe also 'usage' for other objects documented here.
-\arguments{
-  \item{y}{
-  %%    
-  observed values of the response variable are calculated based on model
 
-    \eqn{y_i=\alpha+\beta x_i+\epsilon_i}(mod 2\eqn{\pi}) (i=1,2,...,n). here n is sample size. random error  
-  
- having a VonMises distribution with circular mean 0 and concentration 
-
-parameter k.
-}
-\item{Y}{
-the estimated value of y under model  
- \eqn{y_i=\alpha+\beta x_i+\epsilon_i}(mod 2\eqn{\pi}) (i=1,2,...,n).
-}
-\item{n}{
-the sample size
-}
-}
+\usage{data("DMCE")}
 \details{
-%% 
-The ith observation is identified as an outlier if the difference of means circular error (DMCE)  exceeds a pre-specified cut-off point.
+A simulation study is carried out to find the percentile (cut-off) point of DMCE by using Monte-
+Carlo methods. Fifteen different sample sizes are used, namely n = 10, . . . , 150. For each
+sample size n, a set of random circular errors is generated from the von Mises distribution with
+mean direction 0 and various values of concentration parameter k = 1, 2, . . . , 100. Samples
+of von Mises distribution VM(\eqn{\pi}/4, 10) with corresponding size n are generated to represent the
+values of X variable. The parameters of model \eqn{y_i=\alpha+\beta x_i+\epsilon_i} (mod 2\eqn{\pi}) 
+(i=1,2,...,n) are fixed at \eqn{\alpha}=0 and \eqn{\beta}=1. Observed values
+of the response variable y are calculated based on model \eqn{y_i=\alpha+\beta x_i+\epsilon_i} (mod 2\eqn{\pi})
+ (i=1,2,...,n) and subsequently the fitted values Y
+are obtained. We then compute the value of the MCE statistic for full data set. Sequentially, we
+exclude the ith observation from the generated sample, where i = 1, . . . , n. We refit the reduced
+data using model \eqn{y_i=\alpha+\beta x_i+\epsilon_i} (mod 2\eqn{\pi}) (i=1,2,...,n)
+ and then calculate the values of MCe. Then, we obtain the value of DMCE.
+The process is carried out 2000 times for each combination of sample size n and concentration
+parameter k. 
 }
-\value{
 
-Number, that is Maximum absolute difference between the values of the mean circular statistics for full and reduced data sets. 
-
-}
 \references{
-%% ~
-A. H. Abuzaid, A. G. Hussin & I. B. Mohamed (2013) Detecting of outliers in simple circular   regression models
-using the mean circular error statistics 
-}
-\author{
-%%
-Azade Ghazanfarihesari, Majid Sarmad
-}
-
-\seealso{
-%% ~~
-circular, CircStats 
-}
-\examples{
-# Generate a data set dependent of circular variables.
-library(CircStats)
-n <- 50
-x <- rvm(n = 50, 0, 2)
-y <- rvm(n = 50, pi/4, 5)
-# Fit a circular-circular regression model.
-circ.lm <- circ.reg(x, y, order = 1)
-Y <- circ.lm$fitted
-DMCE(y, Y, n)
+A. H. Abuzaid, A. G. Hussin & I. B. Mohamed (2013) Detecting of outliers in simple circular regression models
+using the mean circular error statistics.
 }

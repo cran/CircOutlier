@@ -2,7 +2,7 @@
 \alias{Predict}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Estimates of Parameters in Circular Regression
+Estimates of Parameters in Circular-Circular Regression
 }
 \description{
 This function calculated the maximum-likelihood estimates parameters
@@ -16,7 +16,7 @@ Predict(x, y)
 independent variable on model \eqn{y_i=\alpha+\beta x_i+\epsilon_i} (mod 2\eqn{\pi}) (i=1,2,...,n)
 }
   \item{y}{
-the response variable on model \eqn{y_i=\alpha+\beta x_i+\epsilon_i}(mod 2\eqn{\pi}) (i=1,2,...,n)
+the response variable on model \eqn{y_i=\alpha+\beta x_i+\epsilon_i} (mod 2\eqn{\pi}) (i=1,2,...,n)
 }
 }
 \details{
@@ -32,7 +32,7 @@ Number
 .
 }
 \references{
-A. H. Abuzaid, A. G. Hussin & I. B. Mohamed (2013) Detecting of outliers in simple circular  
+A. H. Abuzaid, A. G. Hussin & I. B. Mohamed (2013) Detection of outliers in simple circular  
  regression models
 using the mean circular error statistics 
 }

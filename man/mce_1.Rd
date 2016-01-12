@@ -3,7 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 %%  ~~
-Detecting of Outliers in Circular Regression
+Detection of Outliers in Circular-circular Regression
 }
 \description{
 %%  ~~ 
@@ -28,7 +28,7 @@ Number, that is mean circular error after removal of the ith observation from th
 }
 \references{
 %% ~
-A. H. Abuzaid, A. G. Hussin & I. B. Mohamed (2013) Detecting of outliers in simple circular
+A. H. Abuzaid, A. G. Hussin & I. B. Mohamed (2013) Detection of outliers in simple circular
    regression models
 using the mean circular error statistics 
 }
